@@ -4,6 +4,8 @@ import java.lang.*;
 * Created by Arniel Pama, 09/13/16;
 */
 
+//use @author para mocolor!:D 
+
 public class Date{
 
 	private int day; // [1, 31]
@@ -17,7 +19,7 @@ public class Date{
 	}
 
 	public Date( ){
-		this.day = 1;
+		this.day = 1; // no need na ang this :p
 		this.month = 1;
 		this.year = 1000;
 	}
@@ -51,7 +53,7 @@ public class Date{
 		this.month = month;
 	}
 
-	public boolean isLeapYear( int year ){
+	public boolean isLeapYear( int year ){ // nice! :D
 		if ( year % 4 == 0 ){
 			if ( year % 10 == 0 ){
 				if ( year % 400 != 0 ){
@@ -126,7 +128,7 @@ public class Date{
 	}
 
 	public String toString( ){
-		return String.format("%02d/%02d/%d", month, day, year);
+		return String.format("%02d/%02d/%d", month, day, year); // pwede %d nalang kay nag set namn ka daan!
 	}
 
 	public void setDate( int year, int month, int day ){
