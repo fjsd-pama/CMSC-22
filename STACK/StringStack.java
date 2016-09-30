@@ -1,5 +1,10 @@
 import java.util.*;
 
+/**
+* by Miguel Carlo Fernandez, Jose Arniel Pama, & Frank Okiya @9/27/2016
+*/
+
+
 public class StringStack{
 	private String[] elements;		
 	private int size;
