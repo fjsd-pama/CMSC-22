@@ -1,0 +1,21 @@
+Pama, Jose Arniel
+Okiya, Franklin
+Dalaota, Daniel
+
+1) This allows us to avoid the redundancy of having to copy again our codes for the superclass to the subclasses. We can just inherit the functions of the superclass by extending the subclasses to it.
+
+This makes us to better understand the connection between the superclass and its subclasses.
+
+Our subclasses can use the methods in their parent class, or may even access its (the parent's) instance variables--through getters and setters, by accessing them directly if the variables are declared "protected".
+
+2) This calls the method from the parent class.
+
+We override certain methods because we want our implementation of them to be different in the subclass we are in.
+
+3) When there is at least one method in the class that is declared abstract, the whole class automatically becomes abstract. Some common operations may be performed by the members of our subclasses, but done in a different way by each; that's why there are abstract classes.
+
+But abstract classes may not be instantiated. The abstract parent class is not complete, since its subclasses only has the capability to perform the abstract methods it has declared; that's why we can't instantiate an abstract class.
+
+4) Because sometimes we may have some constructor in the subclass that may use the "super" keyword to invoke specific constructor on the parent class (the abstract class).
+
+5) Some common operations may be performed by the members of our subclasses, but done in a different way by each. When this happens, it is a good option to declare a set of abstract method/s in the parent class. We can get compilation errors for a certain class if we do not implement the abstract method/s defined from its parent.
