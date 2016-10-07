@@ -8,11 +8,11 @@ public class Circle extends Shape{
  private double radius = 1.0;
 
  public Circle(){
-   this.radius = 1.0;
+   setRadius(1.0);
    //dili na ba ni butangan ug color? ug filled?
  }
  public Circle(double radius){
-  this.radius = radius;
+  setRadius(radius);
   //kani sad, di na ba ni butangan ug color? ug filled?
  }
  public Circle(double radius, String color, boolean filled){
