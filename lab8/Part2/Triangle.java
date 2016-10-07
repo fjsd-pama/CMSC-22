@@ -1,4 +1,5 @@
 import java.lang.Math;
+import java.lang.String;
 
 /**
  * Created by Arniel, Frank, Daniel at 10/4/16
@@ -42,4 +43,8 @@ public class Triangle extends Shape{
   	public double getPerimeter(){
   		return s1 + s2 + s3;
   	}
+	
+	public toString(){
+		return String.format("A Triangle with sides %f, %f, %f", s1, s2, s3) + ", which is a subclass of" + super.toString();
+	}
 }
