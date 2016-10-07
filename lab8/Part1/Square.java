@@ -24,10 +24,16 @@ public class Square extends Rectangle{
 
   @Override
   public void setWidth(double side){
+    if ( side <= 0 ){
+      throw new IllegalArgumentException("Side must be greater than zero!!");
+    }
     super.setWidth(side);
   }
   
   public void setLength(double side){
+    if ( side <= 0 ){
+      throw new IllegalArgumentException("Side must be greater than zero!!");
+    }
     super.setLength(side);
   }
 
