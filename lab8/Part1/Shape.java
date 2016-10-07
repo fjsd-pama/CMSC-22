@@ -27,6 +27,6 @@
    this.filled = filled;
   }
   public String toString(){
-   return String.format("A Shape with a color of" + color + "and" + filled + "filled/Not filled");
-  } //di pa ko sure unsa'y iprint ani? -.-
+   return String.format("A Shape with a color of" + color + "and" + (filled? " is filled": " is not filled"));
+  }
 }
