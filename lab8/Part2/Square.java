@@ -15,7 +15,7 @@ public class Square extends Rectangle{
   }
 
   public double getSide(){
-    return length; //pwede ra sad ang width pilion
+    return getLength(); //pwede ra sad ang width pilion
   }
   public void setSide(double side){
     setWidth(side); //calls setWidth() within file
@@ -24,22 +24,28 @@ public class Square extends Rectangle{
 
   @Override
   public void setWidth(double side){
+    if ( side <= 0 ){
+      throw new IllegalArgumentException("Side must be greater than zero!!");
+    }
     super.setWidth(side);
   }
   
   public void setLength(double side){
+    if ( side <= 0 ){
+      throw new IllegalArgumentException("Side must be greater than zero!!");
+    }
     super.setLength(side);
   }
 
   public double getArea(){
-    return length * length;
+    return getLength() * getLength();
   }
 
   public double getPerimeter(){
-    return 4 * length;
+    return 4 * getLength();
   }
 
   public String toString(){
-    return String.format("A Square with side=" + length + ", which is a subclass of" + super.toString());
+    return String.format("A Square with side=" + getLength() + ", which is a subclass of" + super.toString());
   }
 }
