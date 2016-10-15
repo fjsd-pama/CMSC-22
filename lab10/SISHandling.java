@@ -32,7 +32,7 @@ public class SISHandling extends StudentInformation {
 
 		int counter = 1;
 		String sCurrentLine;
-        	String studentNumber = "";
+        String studentNumber = "";
 	    String firstName = "";
 	    char middleInitial = ' ';
 	    String lastName = "";
