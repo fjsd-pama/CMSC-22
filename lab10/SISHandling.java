@@ -58,16 +58,16 @@ public class SISHandling extends StudentInformation {
             	} else if ( counter == 5 ){
             		course = sCurrentLine;
             	} else{
-        			yearLevel = toInteger(sCurrentLine);
+        		yearLevel = toInteger(sCurrentLine);
             		stud = new StudentInformation(studentNumber, firstName, middleInitial, lastName, course, yearLevel);
             		myList.add(stud);
-            		counter = 1;
+            		counter = 0;
             		studentNumber = "";
-				    firstName = "";
-				    middleInitial = ' ';
-				    lastName = "";
-				    course = "";
-					yearLevel = 0;
+			firstName = "";
+			middleInitial = ' ';
+			lastName = "";
+			course = "";
+			yearLevel = 0;
             	}
 
             	counter++;
