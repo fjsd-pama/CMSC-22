@@ -19,6 +19,8 @@ public class SISHandling extends StudentInformation {
 		for ( int i = 0; i < given.length(); i++ ){
 			if ( given.charAt(i) >= '0' && given.charAt(i) <= '9'){
 				result = (result * 10) + (given.charAt(i) - 48);
+			} else{
+				throw new IllegalArgumentException("Invalid number. Contains non-integers!!");
 			}
 		}
 
