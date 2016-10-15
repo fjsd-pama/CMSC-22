@@ -11,18 +11,19 @@ public class StudentInfoSystem {
         int x = 0;
         String studNum = "";
 
-        while ( x < 1 || x > 4 ){
+        while ( x < 1 || x > 5 ){
         	
 	        System.out.println("\nWhat do you want to do??");
 	        System.out.println("1. Register a student");
 	        System.out.println("2. Retrieve student information");
 	        System.out.println("3. Delete a student");
-	        System.out.println("4. Exit");
+	        System.out.println("4. Update a student information");
+	        System.out.println("5. Exit");
 	        System.out.print("\tChoose a number: ");
 	        x = sc.nextInt();
 	        
 
-	        if ( x < 1 || x > 4){
+	        if ( x < 1 || x > 5){
 	        	System.out.println("Invalid input!! Try again.");
 	        }
 
@@ -63,8 +64,19 @@ public class StudentInfoSystem {
 	    	}
 
 	    	toHandle.DeleteStudent(studNum);
+	    } else if( x == 4 ){
+	    	System.out.print("\nUpdate Student: ");
+	    	studNum = sc.next();
+
+	    	while ( !(toHandle.isStudentNumExisting(studNum)) ){
+	    		System.out.println("THAT STUDENT NUMBER DOESN'T EXIST!!");
+	    		System.out.print("Enter again: ");
+	    		studNum = sc.next();
+	    	}
+
+	    	toHandle.UpdateStudent(studNum);
 	    } else{
-	    	//if x == 4; this is the EXIT function
+	    	//if x == 5; this is the EXIT function
 	    	int y = 0;
 
 	    	while ( y < 1 || y > 2 ){
