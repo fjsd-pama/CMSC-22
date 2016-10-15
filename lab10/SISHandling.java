@@ -154,7 +154,44 @@ public class SISHandling extends StudentInformation {
 				myList.remove(x);
 				System.out.println("Student " + studentNumber + " deleted!");
 				break;
-				}
+			}
+
+			x++;
+		}
+
+	}
+
+	public void UpdateStudent( String studentNumber ){
+		int x = 0;
+		StudentInformation current = new StudentInformation();
+		while ( x < myList.size() ){
+			if ( ( (current = myList.get(x)).getStudentNumber() ).equals(studentNumber) ){
+
+				Scanner sc = new Scanner(System.in);
+				String scanned = "";
+			    
+				System.out.print("First name: ");
+				scanned = sc.nextLine();
+				String firstName = scanned;
+				System.out.print("Middle Initial: ");
+				scanned = sc.nextLine();
+				char middleInitial = scanned.charAt(0);
+				System.out.print("Last Name: ");
+				scanned = sc.nextLine();
+				String lastName = scanned;
+				System.out.print("Course: ");
+				scanned = sc.nextLine();
+				String course = scanned;
+				System.out.print("Year Level: ");
+				scanned = sc.nextLine();
+				int yearLevel = toInteger(scanned);
+
+				current = new StudentInformation(studentNumber, firstName, middleInitial, lastName, course, yearLevel);
+				myList.remove(x);
+				myList.add(x, current);
+				System.out.println("Student " + studentNumber + " updated!");
+				break;
+			}
 
 			x++;
 		}
