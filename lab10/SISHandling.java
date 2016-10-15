@@ -31,18 +31,17 @@ public class SISHandling extends StudentInformation {
 	public SISHandling(){
 
 		int counter = 1;
+		String sCurrentLine;
+        	String studentNumber = "";
+	    String firstName = "";
+	    char middleInitial = ' ';
+	    String lastName = "";
+	    String course = "";
+		int yearLevel = 0;
 
 		BufferedReader br = null;
 
         try {
-
-            String sCurrentLine;
-            String studentNumber = "";
-		    String firstName = "";
-		    char middleInitial = ' ';
-		    String lastName = "";
-		    String course = "";
-			int yearLevel = 0;
             br = new BufferedReader(new FileReader("db.txt"));
 
             while ((sCurrentLine = br.readLine()) != null) {
@@ -60,19 +59,22 @@ public class SISHandling extends StudentInformation {
             	} else if ( counter == 5 ){
             		course = sCurrentLine;
             	} else{
-        		yearLevel = toInteger(sCurrentLine);
+        			yearLevel = toInteger(sCurrentLine);
+
             		stud = new StudentInformation(studentNumber, firstName, middleInitial, lastName, course, yearLevel);
             		myList.add(stud);
+
             		counter = 0;
             		studentNumber = "";
-			firstName = "";
-			middleInitial = ' ';
-			lastName = "";
-			course = "";
-			yearLevel = 0;
+				    firstName = "";
+				    middleInitial = ' ';
+				    lastName = "";
+				    course = "";
+					yearLevel = 0;
             	}
 
             	counter++;
+
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -104,44 +106,27 @@ public class SISHandling extends StudentInformation {
 		int x = 1;
 		StudentInformation student = new StudentInformation();
 		Scanner sc = new Scanner(System.in);
-	    String firstName = "";
-	    char middleInitial = ' ';
-	    String lastName = "";
-	    String course = "";
-		int yearLevel = 0;
+		String scanned = "";
+	    
+		System.out.print("First name: ");
+		scanned = sc.nextLine();
+		String firstName = scanned;
+		System.out.print("Middle Initial: ");
+		scanned = sc.nextLine();
+		char middleInitial = scanned.charAt(0);
+		System.out.print("Last Name: ");
+		scanned = sc.nextLine();
+		String lastName = scanned;
+		System.out.print("Course: ");
+		scanned = sc.nextLine();
+		String course = scanned;
+		System.out.print("Year Level: ");
+		scanned = sc.nextLine();
+		int yearLevel = toInteger(scanned);
 
-		while ( x <= 5 ){
-			if ( x == 1 ){
-				System.out.print("First name: ");
-				firstName = sc.next();
-			}
-				
-			else if ( x == 2){
-				System.out.print("Middle Initial: ");
-				middleInitial = (sc.next()).charAt(0);
-			}
-				
-			else if ( x == 3 ){
-				System.out.print("Last Name: ");
-				lastName = sc.next();
-			}
-				
-			else if ( x == 4 ){
-				System.out.print("Course: ");
-				course = sc.next();
-			}
-				
-			else{
-				System.out.print("Year Level: ");
-				yearLevel = sc.nextInt();
-			}
-
-			x++;
-		}
-
-		System.out.println();
 		student = new StudentInformation(studentNumber, firstName, middleInitial, lastName, course, yearLevel);
 		myList.add(student);
+		System.out.println();
 		System.out.println("Student added!");
 
 	}
@@ -204,9 +189,8 @@ public class SISHandling extends StudentInformation {
 				bw.newLine();
 				bw.write( current.getCourse() );
 				bw.newLine();
-				bw.write( current.getYearLevel() );
+				bw.write( String.valueOf(current.getYearLevel()) );
 				bw.newLine();
-
     			x++;
     		}
 
