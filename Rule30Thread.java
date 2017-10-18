@@ -144,16 +144,6 @@ public class Rule30Thread extends Thread{
 			    worker[i].printArray();
 			}
 
-			/*for (int i = 0; i < THREAD_COUNT; i++) {
-	            while (worker[i].isAlive()) {
-	                try {
-	                    worker[i].join();
-	                } catch (InterruptedException e) {
-	                    System.err.println("thread interrupted: " + e.getMessage());
-	                }
-	            }
-	      	}*/
-
 		}
 
     	System.out.println("--> Time consumed in ms: " + (System.currentTimeMillis() - startTime));		
