@@ -77,8 +77,7 @@ public class LargeInteger {
         LargeInteger a = new LargeInteger();
         LargeInteger b = new LargeInteger();
 
-        //DON'T FRET. THIS IS JUST TO HANDLE NEGATIVE NUMBERS.
-        //*I hope so*
+        //handles negative numbers
         if ( this.isNegative && !li.isNegative ){
             a = new LargeInteger(li.number);
             b = new LargeInteger(this.number);
@@ -163,8 +162,7 @@ public class LargeInteger {
         LargeInteger a = new LargeInteger();
         LargeInteger b = new LargeInteger();
 
-        //DON'T FRET. THIS IS JUST TO HANDLE NEGATIVE NUMBERS.
-        //*I hope so*
+        //handles negatie numbers
         if ( this.isNegative && !li.isNegative ){
             a = new LargeInteger(this.number);
             b = new LargeInteger(li.number);
