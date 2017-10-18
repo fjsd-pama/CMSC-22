@@ -138,8 +138,8 @@ public class Rule30Thread extends Thread{
 				worker[i].start();
 			    while (worker[i].isAlive()) {
 			    	//wait until this thread dies
-						//before printing the resulting array
-						//and proceeding to the next thread
+					//before printing the resulting array
+					//and proceeding to the next thread
 			    }
 			    worker[i].printArray();
 			}
