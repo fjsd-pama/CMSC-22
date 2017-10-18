@@ -1,14 +1,9 @@
-// package gui;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-/**
- * Created by nmenego on 10/24/16.
- */
 public class RockPaperScissorsLizardSpock extends Frame {
     RockPaperScissorsLizardSpock kani;
     private Label urChoice;
@@ -27,8 +22,6 @@ public class RockPaperScissorsLizardSpock extends Frame {
     private Font myFont = new Font("Serif", Font.BOLD, 15);
     private Dialog dialog;
     private Button dialogBtn;
-    // private Button dialogBtn;
-    // private Button dialogBtn2;
     int compChoice;
     int playerChoice;
     String toSetInResultArea;
@@ -83,8 +76,7 @@ public class RockPaperScissorsLizardSpock extends Frame {
 
         // add them to container
         add(urChoice);
-        setLayout(new GridLayout());
-        //add(handChoices);
+        setLayout(new GridLayout());        
         add(rock);
         add(paper);
         add(scissors);
@@ -113,8 +105,6 @@ public class RockPaperScissorsLizardSpock extends Frame {
     public void displayDialog(){
       dialog = new Dialog(this, "Game over");
       dialogBtn = new Button(whoWon() + " Click HERE to play again. Exit if not.");
-      // dialogBtn = new Button("ok.");
-      // dialogBtn2 = new Button("no.");
 
       dialogBtn.addActionListener(new ActionListener() {
           @Override
@@ -137,9 +127,7 @@ public class RockPaperScissorsLizardSpock extends Frame {
       });
 
       dialog.add(dialogBtn);
-      dialog.setBackground(Color.YELLOW);
-      // dialog.add(dialogBtn);
-      // dialog.add(dialogBtn2);
+      dialog.setBackground(Color.YELLOW);   
       dialog.setSize(400, 100);
       dialog.setVisible(true);
     }
