@@ -108,8 +108,8 @@ public class Rule30Thread extends Thread{
 			rt.start();
 
 			while(rt.isAlive()){
-				//wait until this thread dies
-				//before printing the resulting array
+			    //wait until this thread dies
+			    //before printing the resulting array
 			}
 
 			rt.printArray();
@@ -126,8 +126,8 @@ public class Rule30Thread extends Thread{
 				if(i == THREAD_COUNT - 1){
 					end = x;
 				}
-				// System.out.println("start: " + start);
-				// System.out.println("end: " + end);
+			    // System.out.println("start: " + start);
+			    // System.out.println("end: " + end);
 				worker[i] = new Rule30Thread(hey, x, start, end);
 
 				start = end + 1;
@@ -138,10 +138,9 @@ public class Rule30Thread extends Thread{
 				worker[i].start();
 			    while (worker[i].isAlive()) {
 			    	//wait until this thread dies
-					//before printing the resulting array
-					//and proceeding to the next thread
+						//before printing the resulting array
+						//and proceeding to the next thread
 			    }
-
 			    worker[i].printArray();
 			}
 
@@ -153,11 +152,10 @@ public class Rule30Thread extends Thread{
 	                    System.err.println("thread interrupted: " + e.getMessage());
 	                }
 	            }
-	        }*/
+	      	}*/
 
 		}
 
-        System.out.println("--> Time consumed in ms: " + (System.currentTimeMillis() - startTime));
-		
+    	System.out.println("--> Time consumed in ms: " + (System.currentTimeMillis() - startTime));		
 	}
 }
